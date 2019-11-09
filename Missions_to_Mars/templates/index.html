@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Missions to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <h4>Featured Mars Image</h4>
+        <img src="{{ mars.picture }}" class="img-responsive" style="max-width:100%; max-height: auto;" alt="Mars">
+      </div>
+      <br>
+      <br>
+      </div> <h2>Up to Date Mars News:</h2>
+    <h3>{{ mars.title }}</h3>
+    <h3>{{ mars.para }}</h3>
+    <br>
+      </div>
+      <div class="card" style="width: 18rem;">
+                  <h5 class="card-title">Current Weather on Mars</h5>
+                          <p class="card-text">{{mars.weather}}</p>
+                      </div>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="row" id="mars-facts">
+                      <div class="col-md-12">
+                          <h4>Mars Facts</h4>
+                          {{mars.facts | safe}}
+                      </div>
+                  </div>
+    
+  </div>
+  </div>
+</body>
+
+</html>
